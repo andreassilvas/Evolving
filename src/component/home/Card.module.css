@@ -1,0 +1,20 @@
+.innerCard {
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.innerCard .front,
+.innerCard .back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.innerCard .back {
+    transform: rotateY(180deg);
+}
+
+.innerCard .front {
+    border: 2px solid #FBB6CE;
+}

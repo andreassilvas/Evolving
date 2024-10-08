@@ -1,0 +1,18 @@
+{
+   
+    "cards": {
+        "projectAlt": "image professional projects",
+        "professionalProjects": "Professional Projects",
+        "professionalDescription": "Completing over a dozen projects, implementing numerous optimizations and upgrading the company’s website components have expanded my knowledge of web fundamentals, backend development and the usage of frameworks and libraries.",
+        
+        "customAlt": "image professional customizations",
+        "professionalDOM": "Professional DOM Manipulation",
+        "professionalDescriptionDOM": "Conducting over 200 product customizations, various code migrations and integrations such as Abode Analytics, SessionCam, and Contentsquare allowed me to deepen my knowledge on client-side data management, accessibility, and dynamic user interface development through DOM manipulation.",
+        
+        "personalAlt": "image personal projects",
+        "personalProjects": "Personal Projects",
+        "personalDescription": "Building applications and creating my own website expanded my expertise in backend development, responsive design, web hosting and security, UX principles, version control, client and server side architecture and performance optimization."
+    }
+}
+            
+    

@@ -1,50 +1,100 @@
-# React + TypeScript + Vite
+# Card Flipping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- A dynamic React app with reusable card components, language translation support, and Chakra UI integration. The app allows users to toggle between English and French, dynamically display content on flipping cards, and map images based on predefined IDs.
 
-Currently, two official plugins are available:
+- Introduction
+  This project is a React-based web app that uses Chakra UI components to create an interactive experience. It features dynamically flipping cards, image mapping, and multi-language support through react-i18next. This app is designed to be reusable and customizable, making it easy to adapt to different use cases.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
 
-## Expanding the ESLint configuration
+- Reusable Card Component: A clickable, flipping card with customizable content.
+- Language Support: Toggle between English and French using a language selector.
+- Chakra UI: All UI components are styled with Chakra UI for easy customization.
+- Dynamic Image Mapping: Images are displayed dynamically based on a given ID.
+- Interactive UI: Smooth animations for card flipping, implemented using CSS and Chakra UI.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# To set up this project locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Node.js
+- npm
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Steps
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   - git clone https://github.com/your-repo/your-app.git
+
+2. Navigate to the project directory:
+
+   - cd your-app
+
+3. Install dependencies:
+
+   - npm install
+
+4. Run the development server:
+
+   - npm run dev
+
+# Components
+
+    1. CardTemplate
+          A reusable card component with a flip animation. It accepts body, footer, and children as props.
+
+        ```jsx
+        <CardTemplate
+          body="Some project description"
+          footer="Project Footer"
+        >
+          <ImagesMap imageId={1} />
+        </CardTemplate>
+
+        ```
+
+    2. ProjectsCard
+          A grid layout displaying multiple card components with content translated via react-i18next.
+
+      ```jsx
+        <SimpleGrid>
+          <CardTemplate body={t("cards.professionalProjects")} footer={t("cards.footer")} />
+        </SimpleGrid>
+      ```
+
+      3. ImagesMap
+          This component dynamically renders images based on the imageId passed as a prop. It uses Chakra UI's Image component for displaying the images.
+
+      ```jsx
+
+        <ImagesMap imageId={1} />
+
+      ```
+      4. LanguageSelector
+          A button that allows users to switch between English and French languages.
+
+      ```jsx
+
+        <LanguageSelector />
+
+      ```
+
+      # Translation
+        This project uses react-i18next for language translations. The translations are stored in JSON files in public/locales/en/translation.json and public/locales/fr/translation.json. The useTranslation hook is used to access translation strings.
+
+        ```jsx
+        const { t } = useTranslation();
+        <Text>{t("cards.projectDescription")}</Text>
+
+        ```
+
+      # Image Mapping
+        The ImagesMap component maps imageId to specific images defined in imagesStore. Each image is dynamically rendered with an alt attribute for accessibility.
+
+        ```jsx
+        const imagesStoreMap = {
+          1: { src: images.professionalProjects, alt: "Professional project" },
+          2: { src: images.personalProject, alt: "Personal project" },
+        };
+
+        ```

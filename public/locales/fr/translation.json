@@ -1,0 +1,17 @@
+{
+    "cards": {
+        "projectAlt": "image projets professionnels",
+        "professionalProjects": "Projets Professionnels",
+        "professionalDescription": "La réalisation de plus d'une douzaine de projets, la mise en œuvre de nombreuses optimisations et la mise à niveau de composants du site web de l’entreprise ont contribué à élargir mes connaissances sur les fondamentaux du web, le développement backend et l’utilisation de frameworks et de bibliothèques.",
+
+        "customAlt": "image personnalisations professionnelles",
+        "professionalDOM": "Manipulation du DOM",
+        "professionalDescriptionDOM": "La réalisation de 200+ personnalisation, de nombreuses migration de code et l’intégration de solutions tel que Abode Analytics, SessionCam, and Contentsquare ont renforcé mes connaissances sur la gestion des données côté client, en accessibilité, et en développement dynamique de l'interface utilisateur grâce à la manipulation du DOM.",
+
+        "personalAlt": "image personal projects",
+        "personalProjects": "Projets Personnels",
+        "personalDescription": "Construire des applications et créer mon propre site web ont élargi mon expérience sur le développement backend, le design responsive, l’hébergement et la sécurité de site web, les principes UX, le contrôle de version, l’architecture client-serveur et l’optimisation de la performance."
+    }
+}
+            
+    
