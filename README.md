@@ -24,7 +24,7 @@ Prerequisites
 
 1. Clone the repository:
 
-   - git clone https://github.com/your-repo/your-app.git
+   - git clone https://github.com/andreassilvas/Evolving.git
 
 2. Navigate to the project directory:
 
@@ -36,7 +36,8 @@ Prerequisites
 
 4. Run the development server:
 
-   - npm run dev
+   - npm run start
+   - npm run dev if using vite
 
 # Components
 
